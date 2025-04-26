@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Battle Royale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="container">
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen active">
+      <div class="main-title">Snake Battle Royale</div>
+      <div class="subtitle">Eat food, collect powerups, and outlast the AI snake!</div>
+      <button class="btn" id="start-btn">Start Game (Enter)</button>
+      <div style="margin-top:18px; color:#888; font-size:0.98em;">
+        Controls: Arrow keys to move<br>
+        Enter = Start, R = Restart, H = Home
+      </div>
+      <div id="powerup-legend" style="margin-top:22px;">
+        <div style="font-weight:600; margin-bottom:4px;">Powerups:</div>
+        <div class="legend-item"><span class="legend-color blue"></span>Speed Boost</div>
+        <div class="legend-item"><span class="legend-color yellow"></span>Shield</div>
+        <div class="legend-item"><span class="legend-color orange"></span>Slow Enemy</div>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      <div id="score-area">
+        <div id="player-score">You: 0</div>
+        <div id="ai-score">AI: 0</div>
+      </div>
+      <canvas id="game-canvas" width="400" height="400" tabindex="0"></canvas>
+      <div id="powerup-legend">
+        <div style="font-weight:600; margin-bottom:4px;">Powerups:</div>
+        <div class="legend-item"><span class="legend-color blue"></span>Speed Boost</div>
+        <div class="legend-item"><span class="legend-color yellow"></span>Shield</div>
+        <div class="legend-item"><span class="legend-color orange"></span>Slow Enemy</div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen">
+      <div class="main-title">Game Over</div>
+      <div id="game-over-score">Your Score: 0</div>
+      <button class="btn" id="restart-btn">Restart (R)</button>
+      <button class="btn" id="home-btn">Home (H)</button>
+      <div id="powerup-legend" style="margin-top:22px;">
+        <div style="font-weight:600; margin-bottom:4px;">Powerups:</div>
+        <div class="legend-item"><span class="legend-color blue"></span>Speed Boost</div>
+        <div class="legend-item"><span class="legend-color yellow"></span>Shield</div>
+        <div class="legend-item"><span class="legend-color orange"></span>Slow Enemy</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JS files -->
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/snake.js"></script>
+  <script type="module" src="js/food.js"></script>
+  <script type="module" src="js/powerup.js"></script>
+  <script type="module" src="js/ai.js"></script>
+  <script type="module" src="js/collision.js"></script>
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/game.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
